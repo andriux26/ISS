@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY="/home/pi/raspberry-noaa"
+DIRECTORY="/home/pi/ISS"
 
 for file in $(find $DIRECTORY -type f)
 do
