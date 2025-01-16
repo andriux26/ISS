@@ -38,8 +38,8 @@ if [ $EUID -eq 0 ]; then
 fi
 
 ### Verify cloned repo
-if [ ! -e "$HOME/raspberry-noaa" ]; then
-    die "Is https://github.com/andriux26/raspberry-noaa.git atsiunciama ?"
+if [ ! -e "$HOME/ISS" ]; then
+    die "Is https://github.com/andriux26/ISS.git atsiunciama ?"
 fi
 
 ### Install required packages
@@ -86,7 +86,7 @@ sudo python3 -m pip install numpy ephem  Pillow
 log_done "Packages installed"
 
 ### Create the database schema
-if [ -e "$HOME/raspberry-noaa/panel.db" ]; then
+if [ -e "$HOME/ISS/panel.db" ]; then
     log_done "Database already created"
 else
     sqlite3 "panel.db" < "templates/webpanel_schema.sql"
