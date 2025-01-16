@@ -82,7 +82,7 @@ else
     sudo apt install -yq libgfortran5
 fi
 
-sudo python3 -m pip install numpy ephem tweepy Pillow
+sudo python3 -m pip install numpy ephem  Pillow
 log_done "Packages installed"
 
 ### Create the database schema
@@ -167,7 +167,7 @@ set -e
 log_running "Setting up Nginx..."
 sudo cp templates/nginx.cfg /etc/nginx/sites-enabled/default
 (
-    sudo mkdir -p /var/www/wx/images
+    #sudo mkdir -p /var/www/wx/images
     sudo chown -R pi:pi /var/www/wx
     sudo usermod -a -G www-data pi
     sudo chmod 775 /var/www/wx
@@ -256,10 +256,10 @@ sed -i -e "s/change_latitude/${lat}/g;s/change_longitude/${lon}/g;s/change_tz/$(
 
 success "Nustatymai baikti! Pasitikrinti $HOME/.noaa.conf settings"
 
-echo "
-    Twitterio nustatymai
-    Twitter  $HOME/.tweepy.conf
-"
+#echo "
+#    Twitterio nustatymai
+#    Twitter  $HOME/.tweepy.conf
+#"
 
 set +e
 
