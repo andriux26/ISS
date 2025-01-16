@@ -2,7 +2,7 @@
   class Conn {
     private $con;
     public function __construct() {
-      $this->con = new SQLite3("/home/pi/raspberry-noaa/panel.db");
+      $this->con = new SQLite3("/home/pi/ISS/panel.db");
     }
 
     public function getPasses() {
