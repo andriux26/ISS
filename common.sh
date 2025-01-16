@@ -27,12 +27,12 @@ log() {
 START_DATE=$(date '+%d-%m-%Y %H:%M')
 
 ## sane checks
-if [ ! -d "${NOAA_HOME}" ]; then
-	mkdir -m 775 -p "${NOAA_HOME}"
+if [ ! -d "${ISS_HOME}" ]; then
+	mkdir -m 775 -p "${ISS_HOME}"
 fi
 
-if [ ! -d "${NOAA_OUTPUT}/audio/" ]; then
-	mkdir -m 775 -p "${NOAA_OUTPUT}/audio/"
+if [ ! -d "${ISS_OUTPUT}/audio/" ]; then
+	mkdir -m 775 -p "${ISS_OUTPUT}/audio/"
 fi
 
 
@@ -41,6 +41,6 @@ if [ ! -d "${RAMFS_AUDIO}/audio/" ]; then
 fi
 
 
-if [ ! -d "${NOAA_HOME}/predict/" ]; then
-	mkdir -m 775 -p "${NOAA_HOME}/predict/"
+if [ ! -d "${ISS_HOME}/predict/" ]; then
+	mkdir -m 775 -p "${ISS_HOME}/predict/"
 fi
